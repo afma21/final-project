@@ -1,0 +1,267 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - My Bookstore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header with nav and main */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #333;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #f4a261;
+}
+
+/* Contact Header */
+.contact-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4a261;
+  color: #fff;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+}
+
+.contact-header p {
+  font-size: 18px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #f4a261;
+  outline: none;
+  box-shadow: 0 0 5px rgba(244, 162, 97, 0.5);
+}
+/* contact submit button*/
+.contact-form .submit-btn {
+  display: block;
+  width: 100%;
+padding: 12px;
+  background: #f4a261;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+  background: #e76f51;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+/*footer with description*/
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-container div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-container h3 {
+ font-size: 18px;
+  border-bottom: 2px solid #f4a261;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+/*footer with links*/
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+}
+
+</style>
+<body>
+  <header>
+    <div class="logo">My Bookstore</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-header">
+    <h1>Contact Us</h1> 
+    <p>We’d love to hear from you! Fill out the form below, and we’ll get back to you as soon as possible.</p>
+  </section>
+
+  <section class="contact-form-section">
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="inquiry">Inquiry Type:</label>
+      <select id="inquiry" name="inquiry" required>
+        <option value="disabled selected">Select an option</option>
+        <option value="order">MBBS</option>
+        <option value="book-request">D Pharm</option>
+        <option value="membership">BSCS</option>
+        <option value="feedback">DPT</option>
+      </select>
+     
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About My Bookstore</h3>
+        <p>Your one-stop shop for the best books in town. Connect with us for all your reading needs!</p>
+		<p>We are your trusted source for timeless classics and modern masterpieces. Explore books for all ages!</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Info</h3>
+        <p>Email: support@mybookstore.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 Book Street, walton</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 My Bookstore. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+<p>&copy; 2024 University of Lahore. All rights reserved.</p></footer>

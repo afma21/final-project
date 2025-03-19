@@ -1,0 +1,380 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!--SEO---->
+  <meta name="description" content="Discover a wide range of book across genres to ignite your imagination and expand your Knowledge.">
+  <meta name="keywords" content="novels,lightnovels,education,library">
+  <meta name="author" content="Bookshop">
+  <!-- Robots Meta Tags -->
+  <meta name="robots" content="index, follow"> <!-- Allows search engine indexing -->
+  <meta name="googlebot" content="index, follow">
+  <title>Bookstore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+   background-color: #f9f9f9;
+}
+/*header with nav and main section*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+}
+.old {
+    position: absolute;
+    top: 0;
+    left: 20px;
+  z-index:1;
+}
+.old img {
+    height: 100px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #f4a261;
+}
+/* banner welcome page with shop now button */
+.banner {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4a261;
+  color: #fff;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.banner p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.banner .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.banner .btn:hover {
+  background: #fff;
+  color: #333;
+}
+/*images styles*/
+     .collections {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin: 20px;
+      padding: 0 10px;
+    }
+
+    .collection-item {
+      text-align: center;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border-radius: 30%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 0 auto 10px;
+      transition: transform 0.9s ease;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .collection-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+/* circle tranform */
+    .circle:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .collections {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .circle {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .collections {
+        grid-template-columns: 1fr;
+      }
+
+      .circle {
+        width: 120px;
+        height: 120px;
+      }
+	  }
+	  
+    /*  Article Section */
+    .busy {
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+	  font-size:20px;
+	  h2:20px;
+    }
+
+    main {
+      background-color: #ffffff;
+      padding: 40px;
+      width: 80%;
+      max-width: 1500px;
+      box-shadow: 0 4px 12px rgba(0.2, 0.2, 0.2, 0.2);
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+  
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Responsive Design */
+    media (max-width: 768px) {
+      main {
+        width: 95%;
+        padding: 20px;
+      }
+    }
+
+
+/* Footer Styles  with all text area and dropdown etc*/
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-container div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-container h3 {
+  font-size: 18px;
+  border-bottom: 2px solid #f4a261;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container ul li a {
+  text-decoration: none;
+color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1pxsolid#444;
+}
+
+
+</style>
+<body>
+  <header style="box-shadow:0 6px 8px grey;">
+    <div class="logo">My Bookstore</div>
+	<div class="old">
+                <img src="a11.png" alt="Fashion Shop Logo">
+</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="banner" style="box-shadow:0 6px 8px grey;">
+    <h1>Welcome to My Bookstore</h1>
+    <p>Your one-stop shop for amazing books</p>
+    <a href="books.html" class="btn">Shop Now</a>
+  </section>
+  <br>
+  <div class="new">
+    <center><img src="library.jpg" width="1200" height="500"alt="library"></center>
+	</div>
+	<br>
+  <div class="collections">
+    <div class="collection-item">
+      <div class="circle">
+     <center><img src="jannat.jpg" alt="jannat"></center>
+      </div>
+      <div class="collection-title">Novel</div>
+    </div>
+
+    <div class="collection-item">
+      <div class="circle">
+        <center><img src="physics.jpg" alt="physics"></center>
+      </div>
+      <div class="collection-title">Academics Books</div>
+    </div>
+	<div class="collection-item">
+      <div class="circle">
+         <center><img src="d.jpg" alt="d"></center>
+      </div>
+      <div class="collection-title">Educational</div>
+    </div>
+	<div class="collection-item">
+      <div class="circle">
+        <img src="light.jpg" alt="light">
+      </div>
+      <div class="collection-title">Light Novel</div>
+    </div>
+	<div class="collection-item">
+      <div class="circle">
+        <img src="textbook.jpg" alt="textbook">
+      </div>
+      <div class="collection-title">Library Items</div>
+    </div>
+	<div class="collection-item">
+      <div class="circle">
+        <img src="fairy.jpg" alt="fairy">
+      </div>
+      <div class="collection-title">Children Books</div>
+    </div>
+	
+	<div class="collection-item">
+      <div class="circle">
+        <img src="isl.jpg" alt="isl">
+      </div>
+      <div class="collection-title">Religious Books</div>
+    </div>
+	<div class="collection-item">
+      <div class="circle">
+        <img src="fashion.jpg" alt="fashion">
+      </div>
+      <div class="collection-title">Magazines</div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+
+  <div class="busy">
+    <!-- Main Article Section -->
+    <main>
+      <h2>About Our Bookshop</h2>
+      <p>
+        Welcome to the best online bookshop where you can explore a wide range of books, including novels, light novels, educational books, and more! Our collection is carefully curated to cater to readers of all ages and interests.
+      </p>
+      <p>
+        Whether you're a fan of fiction, a student looking for study materials, or just someone who loves the smell of a new book, we have something for everyone. Check out our latest arrivals and bestsellers to stay ahead of the literary world.
+      </p>
+      <p>
+        Visit us often to enjoy exclusive deals, discounts, and seasonal sales. Join our book community and connect with readers from around the globe!
+      </p>
+    </main>
+  </div>
+<!---footer-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About My Bookstore</h3>
+        <p>Your trusted source for timeless classics and modern masterpieces.</p>
+		<p>We are your trusted source for timeless classics and modern masterpieces. Explore books for all ages!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@mybookstore.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 Book Street, walton</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 My Bookstore. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

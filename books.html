@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books - My Bookstore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+/*header with nav bar and main section*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #333;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+ transition: color 0.3s ease;
+} 
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #f4a261;
+}
+
+/* Books Header Section */
+.books-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4a261;
+  color: #fff;
+}
+
+.books-header h1 {
+  font-size: 50px;
+}
+
+.books-header p {
+  font-size: 19px;
+}
+
+/* Books List Section or buy now button */
+.books-list {
+  display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.book {
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 5px;
+  background: #fff;
+  text-align: center;
+  transition: box-shadow 10s ease;
+}
+.book .btn {
+  padding: 10px 15px;
+  background: #f4a261;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.4s ease;
+}
+
+.book .btn:hover {
+  background: #333;
+}
+
+
+.book:hover {
+  box-shadow: 0 4px 8px rgba(0, 0.4, 0, 0.2);
+}
+
+.book h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.book p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.book strong {
+  color: #000;
+}
+/* Book Border Colors */
+.book:nth-child(1) {
+ box-shadow: 0px 2px 2px yellowgreen;
+}
+
+.book:nth-child(2) {
+ box-shadow: 0px 2px 2px blue;
+}
+
+.book:nth-child(3) {
+  box-shadow: 0px 2px 2px purple;
+}
+
+.book:nth-child(4) {
+  box-shadow: 0 2px 2px orange;
+
+}
+
+.book:nth-child(5) {
+  box-shadow: 0 2px 2px green;
+}
+.book:nth-child(6) {
+  box-shadow: 0 2px 2px skyblue;
+}
+
+.book:nth-child(7) {
+ box-shadow: 0 2px 2px grey;
+}
+
+.book:nth-child(8) {
+box-shadow: 0 2px 2px black;
+}
+
+.book:nth-child(9) {
+box-shadow: 0 2px 2px lightgreen;
+}
+.book:nth-child(10) {
+ box-shadow: 0 2px 2px lightgrey;
+}
+/*main content with article and aside*/
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .article {
+      width: 70%;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  font-size:20px;
+    }
+/*aside*/
+    .aside {
+      width: 25%;
+      background-color: #e2e2e2;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  font-size:20px;
+    }
+	
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-container div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-container h3 {
+  font-size: 18px;
+  border-bottom: 2px solid #f4a261;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container ul li a {
+  text-decoration: none;
+color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1pxsolid#444;
+}
+</style>
+<body>
+  <header>
+    <div class="logo">My Bookstore</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html" class="active">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="books-header"  style="box-shadow:0 6px 6px green;">
+    <h1>Our Book Collection</h1>
+    <p>Discover our wide range of books. There's something for everyone!</p>
+  </section>
+<br>
+  <section class="books-list"  style="box-shadow:0 6px 8px orange;">
+    <div class="book">
+	<center><img src="the great gatsby.jpg" width="450" height="300"alt="The Great GatsBy"></center>
+      <h3>The Great Gatsby</h3>
+      <p>A timeless classic exploring wealth, love, and the American Dream.</p>
+      <p><strong>Price:</strong> $10</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	 <center><img src="Mockingbird.jpg" width="450" height="300"alt="To Kill a Mockingbird"></center>
+      <h3>To Kill a Mockingbird</h3>
+      <p>An inspiring tale of justice and morality in the Deep South.</p>
+      <p><strong>Price:</strong> $15</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	 <center><img src="1984.jpg" width="450" height="300"alt="1984"></center>
+      <h3>1984</h3>
+<p>A dystopian novel about totalitarian regimes and human freedom.</p>
+      <p><strong>Price:</strong> $20</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	 <center><img src="pride.jpg" width="450" height="300"alt="Pride and Prejudice"></center>
+      <h3>Pride and Prejudice</h3>
+      <p>Jane Austen's exploration of love and society in 19th-century England.</p>
+      <p><strong>Price:</strong> $12</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	 <center><img src="alchemist.jpg" width="450" height="300"alt="The Alchemist"></center>
+      <h3>The Alchemist</h3>
+      <p>A magical story of self-discovery and following your dreams.</p>
+      <p><strong>Price:</strong> $18</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	 <center><img src="harry.jpg" width="450" height="300"alt="Harry Potter and the Sorcerer's Stone"></center>
+      <h3>Harry Potter and the Sorcerer's Stone</h3>
+      <p>The start of Harry Potter's magical journey into the wizarding world.</p>
+      <p><strong>Price:</strong> $25</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	<center  style=" padding: 15px;"><img src="lord.jpg" width="450" height="300"alt="Lord of the Rings"></center>
+      <h3>Lord of the Rings</h3>
+      <p>An epic fantasy adventure about the struggle against darkness.</p>
+      <p><strong>Price:</strong> $30</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	<center  style=" padding: 15px;"><img src="catcher.jpg" width="450" height="300"alt="The Catcher in the Rye"></center>
+      <h3>The Catcher in the Rye</h3>
+      <p>A thought-provoking story of teenage rebellion and identity.</p>
+      <p><strong>Price:</strong> $14</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	<center><img src="book thief.jpg" width="450" height="300"alt="The Book Thief"></center>
+      <h3>The Book Thief</h3>
+      <p>A moving tale set during World War II, narrated by Death.</p>
+      <p><strong>Price:</strong> $16</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+    <div class="book">
+	<center><img src="animal.jpg" width="450" height="300"alt="Animal Farm" ></center>
+      <h3>Animal Farm</h3>
+      <p>A satirical novella about politics and societal corruption.</p>
+      <p><strong>Price:</strong> $10</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+	<div class="book">
+	<center><img src="fairytale.jpg" width="450" height="300"alt="fairytale"></center>
+      <h3>Fairytale</h3>
+      <p>Fairy tales bring magic to life with enchanting stories of adventure and wonder.</p>
+      <p><strong>Price:</strong> $30</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+	<div class="book">
+	<center><img src="time.jpg" width="450" height="300"alt="time"></center>
+      <h3>Time Magazine</h3>
+      <p>A widely popular news magazine that covers current events, politics, health, and business.</p>
+      <p><strong>Price:</strong> $20</p>
+	  <button class="btn">Buy Now</button>
+    </div>
+  </section>
+  <br>
+  <br>
+  <!-- Main Content -->
+  <div class="main-content" style="border:1px solid lightgrey;box-shadow:orange 2px 2px;">
+    <article class="article">
+      <h2>Our Latest Bestseller</h2>
+      <p>Discover the most popular books at our store. From thrilling novels to inspiring educational texts, our collection has something for everyone.</p>
+      <p>This week’s bestseller is “The Silent Whisper,” a gripping mystery novel that will keep you on the edge of your seat. Perfect for fans of suspense and drama.</p>
+      <p>Check out our full catalog to find your next favorite book!</p>
+    </article>
+
+    <aside class="aside">
+      <h2>Popular Categories</h2>
+      <ul>
+        <li>Novels</li>
+        <li>Light Novels</li>
+        <li>Educational Books</li>
+        <li>Self-help</li>
+      </ul>
+    </aside>
+  </div>
+  <br>
+  <br>
+<footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About My Bookstore</h3>
+        <p>Your trusted source for timeless classics and modern masterpieces.</p>
+		<p>We are your trusted source for timeless classics and modern masterpieces. Explore books for all ages!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@mybookstore.com</p>
+        <p>Phone: +123-456-7890</p>
+        <p>Address: 123 Book Street, walton</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 My Bookstore. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
